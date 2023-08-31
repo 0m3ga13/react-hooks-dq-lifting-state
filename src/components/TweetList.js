@@ -8,7 +8,6 @@ function TweetList(props) {
         {props.user.tweets.map((tweet) => (
           <TweetItem
             key={tweet.id}
-            handleTweetLike={props.handleTweetLike}
             handle={props.user.handle}
             photo={props.user.photo}
             tweet={tweet}

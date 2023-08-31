@@ -1,5 +1,5 @@
-import React from "react";
-import UserCard from "./UserCard";
+import React, { useState } from 'react';
+import UserCard from './UserCard';
 
 function UserList(props) {
   return (
@@ -7,7 +7,7 @@ function UserList(props) {
       {props.users.map((user) => (
         <UserCard
           key={user.id}
-          handleUserClick={() => console.log("u clicked the user")}
+          handleUserClick={props.handleUserClick}
           {...user}
         />
       ))}
